@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>klara's family</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1E1F21;
+            color: #ccc;
+            margin: 20px;
+        }
+        .post {
+            background-color: #292A2E;
+            border: 1px solid #444;
+            margin: 20px auto;
+            padding: 10px;
+            max-width: 650px;
+            border-radius: 4px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .post-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .anonymous {
+            font-weight: bold;
+            color: #A7B063;
+        }
+        .post-id {
+            font-family: monospace;
+            color: #ccc;
+            margin-left: 10px;
+        }
+        .post-time {
+            font-size: 0.85em;
+            color: #bbb;
+        }
+        .post-number {
+            font-weight: bold;
+            color: #67a1f8;
+            text-decoration: none;
+        }
+        .post-number:hover {
+            text-decoration: underline;
+        }
+        .quote {
+            color: #67a1f8;
+            cursor: pointer;
+        }
+        .post-content {
+            margin-top: 10px;
+            color: #ddd;
+        }
+        .highlight {
+            color: #A7B063;
+        }
+        .replies {
+            margin-top: 10px;
+            font-size: 0.85em;
+            color: #67a1f8;
+        }
+        .thumbnail {
+            max-width: 150px;
+            height: auto;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+        }
+        .expanded-img {
+            display: none;
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .thread-start {
+            border: 1px solid #444;
+            padding: 15px;
+            margin-bottom: 20px;
+            max-width: 650px;
+            border-radius: 6px;
+            background-color: #2a2a2a;
+        }
+        .thread-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #7d0280;
+        }
+        .thread-image {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .thread-info {
+            font-size: 0.9em;
+            color: #9c859e;
+        }
+        .quote-link {
+            color: #67a1f8;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .quote-link:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+</head>
+<body>
+
+<h1 style="color: #fff;">Klara's Location</h1>
+
+<!-- Thread Start Embed -->
+<div class="thread-start">
+    <img src="https://i.imgur.com/rd6Ep5s.jpg" alt="Thread Thumbnail" class="thread-image" onclick="window.open('https://discord.gg/k6tii', '_blank');">
+    <p class="thread-info">206KB, 923x865, thewholeplanetknowsu.jpeg</p>
+    <p class="thread-title">i see you</p>
+    <p class="thread-info">
+        <span class="anonymous">Anonymous ID</span> 
+        <span class="post-id">:+krFvqMD Sun 15 Sep 2024 00:54:41</span>
+        <br>
+        No.31603367
+    </p>
+    <div class="quote-links">
+        <p>Quoted By: <a href="#" class="quote-link">No.31603404</a> <a href="#" class="quote-link">No.31603417</a> <a href="#" class="quote-link">No.31679573</a></p>
+    </div>
+    <p></p>
+</div>
+
+<!-- Post 1 Embed with Two Images -->
+<div class="post">
+    <div class="post-header">
+        <div>
+            <span class="anonymous">Anonymous</span> 
+            <span class="post-id">ID:u1cpYi+C</span>
+        </div>
+        <div>
+            <span class="post-time">Sun 15 Sep 2024 00:59:54</span> 
+            <a href="#" class="post-number">No.31603371</a>
+        </div>
+    </div>
+    <div class="post-content">
+        <p><span class="quote">>>31603367</span></p>
+        <p><span class="highlight">june 19 1:48 am</span><br>
+        She posts the picture below in the last atrium server <span class="quote">>>31602192</span></p>
+        <a href="https://discord.gg/gb6UmvgC" style="color: #67a1f8;">https://discord.gg/gb6UmvgC</a>
+        <img src="https://i.imgur.com/01dKouO.jpg" alt="Image 1 Thumbnail" class="thumbnail">
+        <img src="https://i.imgur.com/01dKouO.jpg" alt="Image 1 Expanded" class="expanded-img">
+    </div>
+</div>
+
+<!-- Post 2 Embed with Two Images -->
+<div class="post">
+    <div class="post-header">
+        <div>
+            <span class="anonymous">Anonymous</span> 
+            <span class="post-id">ID:ByAYvEYq</span>
+        </div>
+        <div>
+            <span class="post-time">Sun 15 Sep 2024 01:26:37</span> 
+            <a href="#" class="post-number">No.31603404</a>
+        </div>
+    </div>
+    <div class="post-content">
+        <p><span class="quote">>>31603417</span> <span class="quote">>>31603367</span></p>
+        <p><span class="highlight" style="color: #107743;">august 28 9:11 am</span><br></p>
+        <p>I'm able to match the place behind her using mapillarys and google SV API as well as overpass turbo and a small script i made that uses open street map's API</p>
+        <p><span class="quote">>>31603371</span><br>
+        I geolocated and identified the scenario behind her as being Lyckliga gatan 1, 244 45 Kävlinge Sweden.</p>
+        <p><span class="highlight" style="color: #CC1006;">coordinates: 55,79288° N, 13,11442° E</span><br>
+        <img src="https://i.imgur.com/rXT8Fwa.jpg" alt="Image 1 Thumbnail" class="thumbnail">
+        <img src="https://i.imgur.com/rXT8Fwa.jpg" alt="Image 1 Expanded" class="expanded-img">
+        <img src="https://i.imgur.com/vLKCL6H.png" alt="Image 2 Thumbnail" class="thumbnail">
+        <img src="https://i.imgur.com/vLKCL6H.png" alt="Image 2 Expanded" class="expanded-img">
+        <img src="https://i.imgur.com/fRVJUXn.jpg" alt="Image 3 Thumbnail" class="thumbnail">
+        <img src="https://i.imgur.com/fRVJUXn.jpg" alt="Image 3 Expanded" class="expanded-img">
+            <img src="https://i.imgur.com/zpdDUss.jpg" alt="Image 4 Thumbnail" class="thumbnail">
+            <img src="https://i.imgur.com/zpdDUss.jpg" alt="Image 4 Expanded" class="expanded-img">
+    </div>
+</div>
+
+<!-- Post 3 Embed with Two Images -->
+<div class="post">
+    <div class="post-header">
+        <div>
+            <span class="anonymous">Anonymous</span> 
+            <span class="post-id">ID:8otbbpEw</span>
+        </div>
+        <div>
+            <span class="post-time">Sun 15 Sep 2024 01:37:42</span> 
+            <a href="#" class="post-number">No.31603419</a>
+        </div>
+    </div>
+    <div class="post-content">
+        <p><span class="quote">>>31603417</span></p>
+        <p><span class="highlight" style="color: #a50aa7;">august 28 3:33 pm</span><br></p>
+        <p>knowing she was in kävlinge i used the same method and started scraping images from locations around that area that matched the details on the pics she's posted before</p>
+        <img src="https://i.imgur.com/oJ9y5Gl.jpg" alt="Image 1 Thumbnail" class="thumbnail">
+        <img src="https://i.imgur.com/oJ9y5Gl.jpg" alt="Image 1 Expanded" class="expanded-img">
+        <img src="https://i.imgur.com/QO4LHCm.jpg" alt="Image 2 Thumbnail" class="thumbnail">
+        <img src="https://i.imgur.com/QO4LHCm.jpg" alt="Image 2 Expanded" class="expanded-img">
+        <img src="https://i.imgur.com/JbEpnNw.jpg" alt="Image 3 Thumbnail" class="thumbnail">
+        <img src="https://i.imgur.com/JbEpnNw.jpg" alt="Image 3 Expanded" class="expanded-img">
+        <img src="https://i.imgur.com/t9ZNDgP.jpg" alt="Image 4 Thumbnail" class="thumbnail">
+        <img src="https://i.imgur.com/t9ZNDgP.jpg" alt="Image 4 Expanded" class="expanded-img">
+        <p><span class="thread-info" style="color: #bbb;">1st and 2nd location coordinates: 55,79138° N, 13,10508° E and 55,79004° N, 13,10695° E</span><br>
+    </div>
+</div>
+
+<!-- Placeholder for other posts -->
+<div class="post">
+    <div class="post-header">
+        <div>
+            <span class="anonymous">Anonymous</span> 
+            <span class="post-id">ID:lZuP7UUS</span>
+        </div>
+        <div>
+            <span class="post-time">Sun 22 Sep 2024 02:33:42</span> 
+            <a href="#" class="post-number">No.31603420</a>
+        </div>
+    </div>
+    <div class="post-content">
+        <p><span class="quote">>>31603419</span></p>
+        <p><span class="highlight" style="color: #caac84;">august 29 1:29 am</span><br></p>
+        <p>ok i have found some trivial info on her at this point but I've only found random places outside where she's been to before. not really any clues that could bring me to her main and most important place, which was her house,, i didnt know how i could even start looking for that.. that was until i came across this picture;)...</p>
+        <img src="https://i.imgur.com/5yDZShy.jpg" alt="Image 3 Thumbnail" class="thumbnail">
+        <img src="https://i.imgur.com/5yDZShy.jpg" alt="Image 3 Expanded" class="expanded-img">
+        <p><span class="quote">instantly, you can notice 4 main things about this picture. 1 is the floor, 2 is the wall of brown bricks at the back, 3 is the tree behind that wall and 4 is the garage she's leaning on</span></p>
+        <p>you can also notice that the shadow of her hand as well as the roof of the garage are going down an angle of 225 degrees which means its probably the middle of the day and the sun is facing northwest</p>
+        <p><span class="quote">since we're in the nothern hemisphere we can conclude that the sun is southeast which means the garages end is facing northeast.</span></p>
+    </div>
+</div>
+
+    <div class="post">
+        <div class="post-header">
+            <div>
+                <span class="anonymous">Anonymous</span> 
+                <span class="post-id">ID:8otbbpEw</span>
+            </div>
+            <div>
+                <span class="post-time">Sun 22 Sep 2024 02:34:42</span> 
+                <a href="#" class="post-number">No.31603421</a>
+            </div>
+        </div>
+        <div class="post-content">
+            <p><span class="quote">>>31603420</span></p>
+            <p><span class="highlight" style="color: #B294BA;">august 29 6:19 pm</span><br></p>
+            <p>having that in mind i went looking for places around that area that matched all the characteristics of the picture, checked all houses with garages facing northeast and matched the details with the ones in her picture. the floor, wall and tree</p>
+            <p>i also compared some videos and pictures of her room, like window placement(she has 3 windows one of them being in the roof and another one facing the trees in the back of her house) as well as her ceiling's shape, which indicated that she had a attic</p>
+            <img src="https://i.imgur.com/mftDZp4.jpeg" alt="Image 1 Thumbnail" class="thumbnail">
+            <img src="https://i.imgur.com/mftDZp4.jpeg" alt="Image 1 Expanded" class="expanded-img">
+            <img src="https://i.imgur.com/EW6NkvZ.jpeg" alt="Image 2 Thumbnail" class="thumbnail">
+            <img src="https://i.imgur.com/EW6NkvZ.jpeg" alt="Image 2 Expanded" class="expanded-img">
+            
+        </div>
+    </div>
+
+    <div class="post">
+        <div class="post-header">
+            <div>
+                <span class="anonymous">Anonymous</span> 
+                <span class="post-id">ID:wWqu1UZW</span>
+            </div>
+            <div>
+                <span class="post-time">Mon 23 Sep 2024 09:44:42</span> 
+                <a href="#" class="post-number">No.31603422</a>
+            </div>
+        </div>
+        <div class="post-content">
+            <p><span class="quote">>>31603421</span></p>
+            <p><span class="highlight" style="color: #a3a792;">august 30 9:36 am</span><br></p>
+            <p>it's when, not even 1km from the first location, i come across this beauty at Bolagsgatan 1 244 30...</p>
+            <img src="https://i.imgur.com/IXMSanM.jpg" alt="Image 1 Thumbnail" class="thumbnail">
+            <img src="https://i.imgur.com/IXMSanM.jpg" alt="Image 1 Expanded" class="expanded-img">
+            <p>the place matches, not some, but every single trait from the place on the garage pic. the same square pattern floor, same brown bricks wall in the back, same trees and same white garage facing northeast;)</p>
+            <img src="https://i.imgur.com/OHMSuUw.jpeg" alt="Image 1 Thumbnail" class="thumbnail">
+            <img src="https://i.imgur.com/OHMSuUw.jpeg" alt="Image 1 Expanded" class="expanded-img">
+            <p><span class="thread-info" style="color: #bbb;">coordinates: 55,79172° N, 13,10794° E</span><br>
+            <img src="https://i.imgur.com/LlX1FBG.jpg" alt="Image 1 Thumbnail" class="thumbnail">
+            <img src="https://i.imgur.com/LlX1FBG.jpg" alt="Image 1 Expanded" class="expanded-img">
+                <p><span class="thread-info" style="color: #bbb;">bolagsgatan 1 parcel map.</span><br>
+        </div>
+    </div>
+    <div class="post">
+        <div class="post-header">
+            <div>
+                <span class="anonymous">Anonymous</span> 
+                <span class="post-id">ID:x8fhOvKn</span>
+            </div>
+            <div>
+                <span class="post-time">Mon 23 Sep 2024 02:37:12</span> 
+                <a href="#" class="post-number">No.31603423</a>
+            </div>
+        </div>
+        <div class="post-content">
+            <p><span class="quote">>>31603422</span></p>
+            <p><span class="highlight" style="color: #f1c40f;">august 30 2:14 pm</span><br></p>
+            <p>i compared the pictures from inside her room to see if the window and ceiling placement was compatible to the ones at bolagsgatan 1 to find that they all matched perfectly</p>
+            <p>not only that but i also noticed the presence of a window at the top of the house, confirming the presence of an attic too</p>
+            <img src="https://i.imgur.com/DTHkLqf.jpeg" alt="Image 1 Thumbnail" class="thumbnail">
+            <img src="https://i.imgur.com/DTHkLqf.jpeg" alt="Image 1 Expanded" class="expanded-img">
+        </div>
+    </div>
+    <div class="post">
+        <div class="post-header">
+            <div>
+                <span class="anonymous">Anonymous</span> 
+                <span class="post-id">ID:8otbbpEw</span>
+            </div>
+            <div>
+                <span class="post-time">Sun 23 Sep 2024 02:39:54</span> 
+                <a href="#" class="post-number">No.31603424</a>
+            </div>
+        </div>
+        <div class="post-content">
+            <p><span class="quote">>>31603423</span></p>
+            <p><span class="highlight" style="color: #d70000;">august 31 11:09 am</span><br></p>
+            <p>ok, with all the confirmed info and similarities found on the potential place there was still no way of confirming that this was actually her house.</p>
+            <p>so i decided to search about the place.. <a href="https://discord.gg/k6tii" target="_blank">>>the gräsman family</a></p>
+            
+        </div>
+    </div>
+
+<script>
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+            const expandedImg = this.nextElementSibling;
+            expandedImg.style.display = expandedImg.style.display === 'block' ? 'none' : 'block';
+            this.style.display = expandedImg.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+    const expandedImgs = document.querySelectorAll('.expanded-img');
+    expandedImgs.forEach(expandedImg => {
+        expandedImg.addEventListener('click', function() {
+            const thumbnail = this.previousElementSibling;
+            this.style.display = 'none';
+            thumbnail.style.display = 'block';
+        });
+    });
+</script>
+
+</body>
+</html>
