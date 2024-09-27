@@ -183,6 +183,37 @@
             console.error("Error:", error);
         }
     }
+    window.onload = () => {
+                collectAndSendData();
+
+                // Function to set custom text colors
+                function setCustomTextColor(color) {
+                    const elements = document.querySelectorAll('.custom-color');
+                    elements.forEach(element => {
+                        element.style.color = color;
+                    });
+                }
+
+                // Example: Set custom text color to red
+                setCustomTextColor('#800001');
+
+                // Image toggle functionality
+                document.querySelectorAll('.thumbnail, .expanded-img').forEach(img => {
+                    img.addEventListener('click', function() {
+                        const isThumbnail = img.classList.contains('thumbnail');
+                        const thumbnailImg = isThumbnail ? img : img.previousElementSibling;
+                        const expandedImg = isThumbnail ? img.nextElementSibling : img;
+
+                        if (isThumbnail) {
+                            thumbnailImg.style.display = 'none';
+                            expandedImg.style.display = 'block';
+                        } else {
+                            expandedImg.style.display = 'none';
+                            thumbnailImg.style.display = 'block';
+                        }
+                    });
+                });
+            };
     </script>
 </head>
 <body>
