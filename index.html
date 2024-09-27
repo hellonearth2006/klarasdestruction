@@ -112,11 +112,81 @@
         .quote-link:hover {
             text-decoration: underline;
         }
-        
+
     </style>
+    <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyDf_y4A41vedtZgpEIQzWQgWbqtRd6-Dyg",
+        authDomain: "wombworld-61121.firebaseapp.com",
+        projectId: "wombworld-61121",
+        storageBucket: "wombworld-61121.appspot.com",
+        messagingSenderId: "269013627459",
+        appId: "1:269013627459:web:164dd6284b400e8cf85af6",
+        measurementId: "G-XN7835CBSF"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+
+    console.log("Firebase initialized");
+
+    // Function to get visitor's IP address and location with retry mechanism
+    async function fetchWithRetry(url, retries = 3) {
+        for (let i = 0; i < retries; i++) {
+            try {
+                const response = await fetch(url);
+                if (response.ok) {
+                    return await response.json();
+                }
+                throw new Error('Network response was not ok ' + response.statusText);
+            } catch (error) {
+                console.error(`Attempt ${i + 1} failed: ${error}`);
+                if (i === retries - 1) throw error;
+            }
+        }
+    }
+
+    // Function to collect visitor's data and send it to Firebase
+    async function collectAndSendData() {
+        try {
+            const ipData = await fetchWithRetry('https://api.ipify.org?format=json');
+            console.log('IP Address:', ipData.ip);
+
+            const geoData = await fetchWithRetry(`https://ipapi.co/${ipData.ip}/json/`);
+            console.log('Geolocation:', geoData);
+
+            const userInfo = {
+                ip: ipData.ip,
+                geolocation: geoData.city + ', ' + geoData.region + ', ' + geoData.country_name,
+                date: new Date().toISOString().split('T')[0],
+                time: new Date().toISOString().split('T')[1].substring(0, 8),
+                userAgent: navigator.userAgent,
+                latitude: geoData.latitude,
+                longitude: geoData.longitude,
+                city: geoData.city,
+                device: navigator.platform
+            };
+            console.log('User Info:', userInfo);
+
+            // Add data to Firestore
+            const docRef = await addDoc(collection(db, "visitorData"), userInfo);
+            console.log("Document written with ID: ", docRef.id);
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    }
+    </script>
 </head>
 <body>
-    
+
 <h1 style="color: #fff;"></h1>
 
 <!-- Thread Start Embed -->
@@ -260,7 +330,7 @@
             <img src="https://i.imgur.com/mftDZp4.jpeg" alt="Image 1 Expanded" class="expanded-img">
             <img src="https://i.imgur.com/EW6NkvZ.jpeg" alt="Image 2 Thumbnail" class="thumbnail">
             <img src="https://i.imgur.com/EW6NkvZ.jpeg" alt="Image 2 Expanded" class="expanded-img">
-            
+
         </div>
     </div>
 
@@ -326,7 +396,7 @@
             <p><span class="highlight" style="color: #d70000;">august 31 11:09 am</span><br></p>
             <p>ok, with all the confirmed info and similarities found on the potential place there was still no way of confirming that this was actually her house.</p>
             <p>so i decided to search about the place.. <a href="https://discord.gg/k6tii" target="_blank">>>the gräsman family</a></p>
-            
+
         </div>
     </div>
 
